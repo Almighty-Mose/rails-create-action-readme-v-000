@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create(params)
+		@post = Post.create(title: params[:title], description: params[:description])
 		# @post.title = params[:title]
 		# @post.description = params[:description]
 		# @post.save
